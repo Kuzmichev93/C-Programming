@@ -13,11 +13,11 @@ int main(){
 void sort_insert(int *array,int size){
     int top;
     for (int i = 1;i<size;i++){
-        for (int k = 0;k<i;k++){
-            if(array[k]>array[i]){
-                top = array[i];
-                array[i] = array[k];
-                array[k] = top;    
+        for (int k = i;k>0;k--){
+            if(array[k-1]>array[k]){
+                top = array[k];
+                array[k] = array[k-1];
+                array[k-1] = top;    
             }
         }
     }
