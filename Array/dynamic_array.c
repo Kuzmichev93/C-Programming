@@ -28,6 +28,7 @@ int append(int *data,int *length, int *capacity, int value){
     }
     data[*length] = value;
     (*length)++;
-
+    
+    free(data);
     return data;
 }
